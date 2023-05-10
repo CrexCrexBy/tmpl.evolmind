@@ -1,0 +1,26 @@
+.background {
+
+	&-cover {
+
+		&-primary {
+			background-image: var(--background-cover-primary-linear-gradient);
+		}
+		// * svg градиенты, брать отсюда (естественно все svg надо оптимизировать):
+		// ? https://heropatterns.com/
+		&-primary-svg {
+			&-diagonal-stripes {
+				background-image: var(--background-cover-primary-linear-gradient), var(--background-cover-primary-svg-diagonal-stripes);
+			}
+			&-current {
+				background-image: var(--background-cover-primary-linear-gradient), var(--background-cover-primary-svg-current);
+			}
+			&-bank-note {
+				background-image: var(--background-cover-primary-linear-gradient), var(--background-cover-primary-svg-bank-note);
+			}
+			&-diagonal-lines {
+				background-image: var(--background-cover-primary-linear-gradient), var(--background-cover-primary-svg-diagonal-lines);
+			}
+		}
+
+	}
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Эволюция мысли</title>
+	<link rel="stylesheet" href="css/uikit.min.css">
+	<link rel="stylesheet" href="css/uikit-extended.min.css">
+	<script src="js/uikit.min.js"></script>
+	<script src="js/uikit-icons.min.js"></script>
+	<script src="js/uikit-extended.js" defer></script>
+</head>
+<body>
+
+	<div class="app">
+
+		<header class="header">
+
+			<!-- * мобильное меню -->
+			<div class="header-navbar uk-navbar-mobile uk-hidden@m">
+				<div class="uk-navbar-container uk-navbar-primary uk-light" uk-sticky>
+					<div class="uk-container uk-container-large">
+
+						<nav uk-navbar="container: .uk-navbar-mobile">
+
+							<div class="uk-navbar-left">
+
+								<a href="." aria-label="Back to home" class="uk-logo uk-navbar-item uk-flex-stretch">
+									<div class="uk-flex">
+										<div class="uk-logo-ru uk-text-right uk-height-1-1 uk-flex-center uk-flex uk-flex-column">
+											<div class="uk-logo-title">Эволюция</div>
+											<div class="uk-logo-subtitle">Мысли</div>
+										</div>
+										<div class="uk-logo-en uk-text-left uk-height-1-1 uk-flex-center uk-flex uk-flex-column">
+											<div class="uk-logo-title">Thought</div>
+											<div class="uk-logo-subtitle">Evolution</div>
+										</div>
+									</div>
+								</a>
+
+							</div>
+
+							<div class="uk-navbar-right">
+								<button class="uk-navbar-toggle uk-navbar-toggle-animate" type="button" aria-label="Open Menu" uk-navbar-toggle-icon uk-toggle="target: #modal-mobile-menu"></button>
+							</div>
+
+						</nav>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- * десктоп меню -->
+			<div class="header-navbar uk-navbar-desktop uk-visible@m">
+				<div class="uk-navbar-container uk-navbar-primary uk-light" uk-sticky>
+					<div class="uk-container uk-container-large">
+
+						<nav uk-navbar="container: .uk-navbar-desktop; dropbar: true">
+
+							<div class="uk-navbar-left">
+
+								<div class="uk-navbar-item">
+									<button class="uk-navbar-toggle" uk-toggle="target: #navbar-search" uk-search-icon></button>
+
+									<div id="navbar-search" class="uk-navbar-dropdown uk-navbar-dropdown-dropbar-large" uk-drop="mode: click; container: .uk-navbar-desktop [uk-sticky]; target-x: .uk-navbar-desktop .uk-navbar; target-y: .uk-navbar-desktop .uk-navbar-container; pos: bottom-center; stretch: x; boundary: .uk-navbar-desktop .uk-navbar-container;">
+										<div class="uk-grid-small uk-flex-middle uk-dark" uk-grid>
+											<div class="uk-width-expand">
+												<form class="uk-search uk-search-navbar uk-width-1-1">
+													<input class="uk-search-input" type="search" placeholder="Поиск на сайте ..." aria-label="Поиск на сайте" autofocus>
+												</form>
+											</div>
+											<div class="uk-width-auto">
+												<button class="uk-drop-close" type="button" uk-close></button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<ul class="uk-navbar-nav">
+									<li class="uk-active"><a href="#ru" class="demo-lang-switch">ru</a></li>
+									<li><a href="#en" class="demo-lang-switch">en</a></li>
+								</ul>
+
+							</div>
+
+							<div class="uk-navbar-center">
+
+								<a href=".#logo-desktop" aria-label="Back to home" class="uk-logo uk-navbar-item uk-flex-stretch">
+									<div class="uk-flex">
+										<div class="uk-logo-ru uk-text-right uk-height-1-1 uk-flex-center uk-flex uk-flex-column">
+											<div class="uk-logo-title">Эволюция</div>
+											<div class="uk-logo-subtitle">Мысли</div>
+										</div>
+										<div class="uk-logo-en uk-text-left uk-height-1-1 uk-flex-center uk-flex uk-flex-column">
+											<div class="uk-logo-title">Thought</div>
+											<div class="uk-logo-subtitle">Evolution</div>
+										</div>
+									</div>
+								</a>
+
+							</div>
+
+							<div class="uk-navbar-right">
+
+								<ul class="uk-navbar-nav">
+									<li class="uk-active visually-hidden"><a href=".#home" tabindex="-1">Главная страница</a></li>
+									<li><a href="#themes">Темы</a></li>
+									<li><a href="#articles">Статьи</a></li>
+									<li><a href="#contacts">Контакты</a></li>
+								</ul>
+
+							</div>
+
+						</nav>
+
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<main>
+
+			<section class="hero" uk-slideshow="ratio: false">
+
+				<div class="uk-position-relative uk-visible-toggle">
+
+					<ul class="uk-slideshow-items" uk-height-viewport="min-height: 360">
+
+						<li class="uk-light">
+
+							<picture class="uk-background-cover" uk-cover style="background-image: url(images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c_thumb.jpg);">
+								<source type="image/webp" srcset="images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@1x.webp 1x, images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@2x.webp 2x">
+								<source type="image/jpg" srcset="images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@1x.jpg 1x, images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@2x.jpg 2x">
+								<img src="images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@1x.jpg" alt="Женщина с ребенком на руках, картина акварель с голубых тонах" uk-img uk-cover>
+							</picture>
+
+							<div class="uk-position-cover background-cover-primary-svg-bank-note">
+								<div class="uk-container uk-container-large uk-position-relative uk-flex uk-flex-left uk-flex-middle" uk-height-viewport="min-height: 360">
+
+									<div class="hero-content uk-width-1-1 uk-width-2-3@m uk-width-3-5@l uk-width-1-2@xl">
+										<h1 class="hero-title">Половина населения мира</h1>
+										<p class="hero-description">Каким образом установление мира связано с продвижением положения женщин в обществе?</p>
+									</div>
+								</div>
+
+							</div>
+
+						</li>
+
+						<li class="uk-light">
+
+							<picture class="uk-background-cover" uk-cover style="background-image: url(images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c_thumb.jpg);">
+								<source type="image/webp" srcset="images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@1x.webp 1x, images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@2x.webp 2x">
+								<source type="image/jpg" srcset="images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@1x.jpg 1x, images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@2x.jpg 2x">
+								<img src="images/slideshow/ee33eb9c73e6a11fc44ee13c54b2404c@1x.jpg" alt="Женщина с ребенком на руках, картина акварель с голубых тонах" uk-img uk-cover>
+							</picture>
+
+							<div class="uk-position-cover background-cover-primary-svg-diagonal-lines">
+								<div class="uk-container uk-container-large uk-position-relative uk-flex uk-flex-left uk-flex-middle" uk-height-viewport="min-height: 360">
+
+									<div class="hero-content uk-width-1-1 uk-width-2-3@m uk-width-3-5@l uk-width-1-2@xl">
+										<h1 class="hero-title">Другой тип полосок на фоне</h1>
+										<p class="hero-description">Мелкие, тонкие полоски на фоне выглядят просто отлично, так же, как и предыдущие волны.</p>
+									</div>
+								</div>
+
+							</div>
+
+						</li>
+
+						<li class="uk-light">
+
+							<picture class="uk-background-cover" uk-cover style="background-image: url(images/slideshow/2de2b70acede7d8ce4a64dab6c693de5_thumb.jpg);">
+								<source type="image/webp" srcset="images/slideshow/2de2b70acede7d8ce4a64dab6c693de5@1x.webp 1x, images/slideshow/2de2b70acede7d8ce4a64dab6c693de5@2x.webp 2x">
+								<source type="image/jpg" srcset="images/slideshow/2de2b70acede7d8ce4a64dab6c693de5@1x.jpg 1x, images/slideshow/2de2b70acede7d8ce4a64dab6c693de5@2x.jpg 2x">
+								<img src="images/slideshow/2de2b70acede7d8ce4a64dab6c693de5@1x.jpg" alt="Фотография утренней долины с домами, тёмные горы и туманные низины" uk-img uk-cover>
+							</picture>
+
+							<div class="uk-position-cover background-cover-primary-svg-diagonal-stripes">
+								<div class="uk-container uk-container-large uk-position-relative uk-flex uk-flex-left uk-flex-middle" uk-height-viewport="min-height: 360">
+
+									<div class="hero-content uk-width-1-1 uk-width-2-3@m uk-width-3-5@l uk-width-1-2@xl">
+										<h1 class="hero-title">Test текс тест</h1>
+										<p class="hero-description">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+									</div>
+								</div>
+
+							</div>
+
+						</li>
+						<li class="uk-light">
+
+							<picture class="uk-background-cover" uk-cover style="background-image: url(images/slideshow/97811425d877d89df4def239b87d129e_thumb.jpg);">
+								<source type="image/webp" srcset="images/slideshow/97811425d877d89df4def239b87d129e@1x.webp 1x, images/slideshow/97811425d877d89df4def239b87d129e@2x.webp 2x">
+								<source type="image/jpg" srcset="images/slideshow/97811425d877d89df4def239b87d129e@1x.jpg 1x, images/slideshow/97811425d877d89df4def239b87d129e@2x.jpg 2x">
+								<img src="images/slideshow/97811425d877d89df4def239b87d129e@1x.jpg" alt="Фотография угла здания с необычными овальными формами на стенах" uk-img uk-cover>
+							</picture>
+
+							<div class="uk-position-cover background-cover-primary-svg-current">
+								<div class="uk-container uk-container-large uk-position-relative uk-flex uk-flex-left uk-flex-middle" uk-height-viewport="min-height: 360">
+
+									<div class="hero-content uk-width-1-1 uk-width-2-3@m uk-width-3-5@l uk-width-1-2@xl">
+										<h1 class="hero-title">Далеко-далеко, за словесными.</h1>
+										<p class="hero-description">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+										<button class="uk-button uk-button-secondary" type="button">Кнопка</button>
+									</div>
+								</div>
+
+							</div>
+
+						</li>
+					</ul>
+
+					<a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+					<a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+
+					<div class="uk-position-bottom-center uk-position-medium">
+						<ul class="uk-slideshow-nav uk-dotnav uk-flex-center"></ul>
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="uk-margin-large">
+				<div class="uk-container uk-container-large">
+					<div class="uk-grid uk-child-width-expand@s uk-position-relative uk-overflow-hidden uk-grid-collapse" uk-grid>
+
+						<!-- <div class="uk-position-top-center uk-position-z-index uk-hidden" style="pointer-events: none;">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1043 148" width="100%" height="1200" uk-svg><path fill="hsl(200 30% 60%)" d="M302 26c16-8 36-9 52-2 19 9 32 29 36 49a29 29 0 0 1 2 9c0 9 0 19-2 28-1 5-1 11 1 17 2 0 4 0 6-2 11-11 16-25 23-38 7-12 12-26 21-36 2-2 5-4 8-2 6 4 10 11 13 18 2 4 4 8 8 11 2 0 2-2 3-3 5-6 4-15 9-21 1-2 4-2 7-3 1-6 2-13 5-19a44 44 0 0 1 5 0l7 13a40 40 0 0 0 14 5c6 2 11 1 17 2a76 76 0 0 0 15 0l7 1 2-5c3 2 7 2 9 5a21 21 0 0 0 9 2 21 21 0 0 1 4 7l17 3c7 0 13 4 20 6l21 10 15 10 13 7c10 6 21 11 33 13 6 1 12 1 17-3 2-5 0-11-5-13-6-2-12 0-17-2a36 36 0 0 1-9-7c-3-6-5-12-5-18a22 22 0 0 0 1-6c-3-3-7-4-8-8-1-3 0-5 1-7l21-3c3-1 6 0 7-3a60 60 0 0 1 12-10c3-2 6-6 10-5 6 1 13-1 19 1 8 3 19 3 25 11a46 46 0 0 0 14 14 232 232 0 0 1 23 16 109 109 0 0 0 19 12c8 4 17 5 26 6 0-6-1-12 1-17l5-9c1-1 0-3-1-5-5-8-8-17-11-26a23 23 0 0 1 0-5c2 1 5 0 6 2a45 45 0 0 0 5 14l4-7a47 47 0 0 1 9 2c2-3 2-7 2-11 0-2 4-3 5-1l7 12h6v-8c1-2 3-4 6-3 2 1 6 2 6 5v6l11-2c4-3 3-8 3-12 1-3 5-2 7 0 0 5 1 11 5 15l9 2-2-8a17 17 0 0 1 3-4h7a14 14 0 0 1 1 12c7 0 14-2 19-6l1-4 2-2c2 1 5 1 5 4l-2 9 5 7c-1-3-1-8 3-10 6-1 11 4 13 9a82 82 0 0 0 11-9 34 34 0 0 0 8-9h4l-7 10c0 3-4 4-5 6l-13 12c-3 2-5 6-2 9l7 10c3 3 8 3 11 6 4 2 7 6 7 11a22 22 0 0 1-7-3c-5 2-6 8-11 10 0 4 3 7 5 10v2c-4 1-7-2-11-4a42 42 0 0 0 1-6c-2-1-3 0-5 1 1 2 3 4 3 7a27 27 0 0 1-9 4c-2 1-3-1-4-2 2-2 4-3 5-6-3-4-1-10-2-15s-4-10-3-15c0-4 3-9 1-13-1-5-6-9-8-14l-2-8-1 1-11 7a6 6 0 0 0-3 4c-2 8 1 17 0 25 0 10-5 20-4 30a8 8 0 0 1 3 5c-4 1-8 1-11-1a14 14 0 0 1-10 2 8 8 0 0 1 3-6 67 67 0 0 1 0-17l1-27a20 20 0 0 0-4-15 87 87 0 0 1-9-10 21 21 0 0 1-11 6 43 43 0 0 0-1 26l3 15a58 58 0 0 1 4 15c0 4 6 6 5 11a44 44 0 0 1-11-2c-4-7-4-16-9-23 0 7 3 15 0 22-2 4-7 4-11 4a8 8 0 0 1 2-6c1-8 1-17-1-25l-1-20c0-5 1-11-1-16l-7-2c-3-2-3-4-4-7-1 5-3 9-2 14l-2 2c0 4-4 8-3 13 2 2 5 4 6 8 1 3 6 3 7 7v5c-6 0-12-1-17 2l-1 9c-1 3-3 6-2 10 1 1 6 3 4 6a85 85 0 0 0-10 1c-2 0-4-1-4-3V91h3v10l3-13-2 1c-8 0-16 0-23-3-17-5-30-16-43-26-8-6-18-11-23-20-4-7-13-7-20-9-5-2-9-2-14-2 4 4 9 4 14 7a20 20 0 0 1-4 2l4 1v-3c3 2 7 2 10 1 2 0 5 1 5 3l-8 3c0 3 3 4 5 5l3 4c4 1 9 2 12 6 7 6 14 14 19 22 1 3 3 5 2 8a9 9 0 0 1-9 3c-7-1-11-8-14-14a45 45 0 0 0-10-13c-2-1-5-3-8 0l-12 12-10 4 16 19v1l-4 3c-8-2-15-8-22-13-3-2-4-7-5-10l-12-3c-5-1-9-5-14-2v11c0 2 3 3 5 5 6 1 13 0 20 3 5 4 7 14 0 18-8 4-17 2-25 0-11-5-22-9-33-16l-16-10-22-12c-12-5-25-9-38-9 0 3 0 6-3 8-2-3-1-7-1-10 1-2 0-4-1-6l-4 1c-2 6-4 14 1 19a20 20 0 0 0 5-3l2 3c-3 4-8 3-11 7-3 3-7 1-10 2-2 3-2 7-3 10-6 0-8 5-10 10-1 6-4 10-7 15l-3 2c-4-3-8-5-10-9-1-1 1-3 2-4 4-4 8-8 8-14-4-2-1-7-4-10a45 45 0 0 0-12 0c-6 1-10 5-14 8l-9 8c-1 2-3 1-5 2-9-14-6-31-6-47 0-2-2-3-3-4-7 6-7 16-11 24-2 4-8 3-10 0l-8-16c-3-3-5-8-9-10a4 4 0 0 0-5 1c-5 5-8 12-12 19-7 14-13 29-21 43a50 50 0 0 1-11 14c-2 2-5 3-8 2a25 25 0 0 1-4-3v-20a68 68 0 0 0 1-9c0-10 0-21-3-31a67 67 0 0 0-26-36 57 57 0 0 0-57-2l-4 5c5-3 10-5 16-5 13 0 25 12 26 25 0 3 3 4 5 6 3 3 2 9 2 13l-10 10c-4 5-5 13-10 17a62 62 0 0 1-14 8c-4 1-10 4-15 1-3-1-1-5-1-8-3-4-5-9-3-14l-5-1c-2-7 5-11 6-17 0-8-2-17 3-24l-2-3c-4 2-6 6-9 10a151 151 0 0 1-55 48l-20 7a161 161 0 0 1-45 7l-21-3c-4-2-8-4-10-8v-9c-5 3-12 4-17 0-3 6 2 13 1 19 0 2-3 2-4 0l-4-19c-2 6-1 12-4 17l-2-1c-2-6 1-12 0-18-3-1-6 0-8-3a19 19 0 0 1-7-12c-2 6-1 13-1 19 1 5-2 10-6 11-6 3-13 1-19-2a81 81 0 0 1-40-40v-5c4 4 5 10 9 14 9 15 24 27 41 31 4 1 10 0 11-5 2-6-1-14 1-21l4-12 2 1c3 5 0 13 5 18 3 3 10 1 12 5l1-2 3-2c1-5 4-8 6-13l-2-6 6-6a31 31 0 0 0-10 7c-3 2-5 6-9 5 0-10 11-12 17-18-8 1-14 8-21 11 0-2 0-5 2-7 3-3 8-5 11-10-6-1-11 2-15 6-2 3-3 7-6 9a4 4 0 0 1-3-3 37 37 0 0 1 2-20l4-7v-7c2-3 6-6 10-4s7 3 8 7c2 4 1 9 2 14 2 1 4 2 7 1 7 0 11-6 17-7a135 135 0 0 1 14-3c8-1 16-4 25-3 2 0 5 1 4 4s-5 4-8 5a26 26 0 0 0-2 4l-5 3 2 2-13 10c2 2 5 2 8 3l20 2c5 1 10 2 13 6 0 5-5 9-9 12-9 2-18-5-28-4-6 2-13 6-18 11l-5 5c-1 4 2 8 6 10 10 5 21 5 32 5l23-4a119 119 0 0 0 39-15 133 133 0 0 0 45-40l11-14c1-5 3-10 8-12m-201 3a6 6 0 0 0 3 5l2-6-5 1m621 2-2 1c-4 4-10 7-13 12l32 23c1 0 3 2 4 0l10-11c1-1 3-3 2-5l-13-1-5-5c2-3 4-4 7-5l-14-9-4-2a18 18 0 0 0-4 2m-615 6h-5l2 4v-3h3c-2 2-4 6-7 6l-2-7c-4 6-6 14-5 21 3-3 5-6 9-8 3-2 7-3 11-3-1-6 0-11-2-16a68 68 0 0 1-4 6m787-5c1 2 2 4 4 4l1-4h-5m29 0a9 9 0 0 0 4 6 44 44 0 0 0-4-6m-618 3c-3 1-7 2-7 6 4-1 7-5 11-5 3-1 6 0 8 2 2 1 2 5 0 6-5 3-11 4-17 3a46 46 0 0 0-2 17c0 2-2 5 0 5 1-4 3-8 7-10l15-3c3-1 5-3 8-3l-3 7c-3 2-6 4-6 7l5 1c3 3 2 7-1 9-2 4-7 4-10 6-2 3-2 7-5 9-4 2-7 5-11 5a30 30 0 0 1 4 2c1 2-2 4-1 7 2 2 5 1 8 0a64 64 0 0 0 15-7c6-4 7-12 11-18 3-3 8-6 9-10s1-9-3-10c-2 3-2 7-6 7-3 1-5-3-5-6l8-7c-1-10-9-20-19-23a22 22 0 0 0-13 3m634-2c1 2 2 5 5 4a23 23 0 0 0 1-4h-6M492 46c-1 3-1 7 1 9l3-21a54 54 0 0 0-4 12m-339-7-16 4-9 6-11 1-1 3a49 49 0 0 1 9 0l1 5 3-4a32 32 0 0 1 4 0l1-4c3 0 5 2 7 4a35 35 0 0 1 4 0c2 1 2 5 5 6l1-3 5-1 1-3-4-3c5-4 11-3 16-5l-1-3c3-3 7-3 10-5-9-1-17 1-25 2m753-2c-3 2-4 7-8 5-3-1-5-4-9-4v3l3 2a56 56 0 0 1 1 16l5 2-4 3a53 53 0 0 0 0 19c2 7 1 13 1 20a7 7 0 0 0 4 0V71l2 1c2 10 7 19 9 29 0 2 3 1 4 2l-3-15c-2-5-4-10-4-15a49 49 0 0 0-2-9l-5-1v-3l4-1 3-17a56 56 0 0 1 4-5h-6m-602 6a27 27 0 0 0 10-1l2-2c-4-1-10-1-12 3m561-2-1 2 3 1 2-5c-2 1-3 0-4 2m116-2 2 7v5l2 1a76 76 0 0 0 0-10l-4-3m-52 1c8 6 10 16 10 25a33 33 0 0 0 7 2v2l-9 1v11c1 7-2 15-1 22 0 2 2 3 3 4l1-14 3-18 2-1c1 8-1 15-1 23 0 3-2 8 2 9 0-4 0-9 2-14a53 53 0 0 0 2-12c0-4 1-9-1-13 2-6-1-14 2-20l7-6a25 25 0 0 0-10 2c-3 1-7 2-10-1-3-2-6-2-9-2M497 66l2 1c2-3 3-6 7-6l9-1h17c11 0 23 3 34 1l5-2c1-1 1-4-1-4l-30-1-22-2c-7-2-14-5-18-12-4 8-3 17-3 26m490-23-1 4h3l1-3-3-1m-247 2c4 3 8 3 12 2-2-5-8-2-12-2m-57 4 1 2 16 13a20 20 0 0 0 4 3l1-12 5 1c2 3 5 6 9 8s5 7 9 9c3 1 6-1 9-2l-23-16c-4-3-8-7-13-9l-18 3m180-1-4 1v2c1 3 4 6 4 9-2 4-5 7-6 11-2 4-1 9-1 14l14-4 12-1-6-4c-1-4-5-7-7-11-2-5 1-9 2-14l-6 1c-3-1-2-3 0-4v-2l-2 2m112 1c1 5 5 9 6 14l-2 9c-1 5 1 9 2 13 2 4 1 7 2 11a38 38 0 0 1 14-2l6-7 6-2c-3-5-11-5-15-9l-7-10c-3-3-3-10 1-13l-7 2-6-6m-217 5-10 13-1 2c5-5 9-10 15-13l-1-2h-3m-621 1v18c0 2-3 4-4 2-1-6 1-13-2-18-1 8-1 17-5 26l-1-1-1-6c-2 4-4 9-9 12v4a28 28 0 0 1 6 0l6 2a26 26 0 0 0 8-3c3-1 5-4 7-6 3-2 7-5 7-9-1-5-1-11-4-15v15l-3-1c-3-6-1-14-5-20m627 6c8 5 11 14 16 22a12 12 0 0 0 15 5c-1-8-6-13-11-19a68 68 0 0 0-13-12c-1-1-3-2-4-1-2 0-2 3-3 5m-274-2 2 29c1 5 1 10 5 14l12-11c4-4 9-7 15-7 3-1 6 1 8-2l1-13 3-3 1 17c2-1 4-3 6-2a68 68 0 0 0 13 0l1 3-19 4 3 9c0 6-6 11-9 16 0 4 5 5 7 8 7-7 7-18 13-25 2-1 5 0 6-3s0-7 3-9a74 74 0 0 1 8 0l4-6-2-3V63h-63c-3-1-5 3-7 5l-4 2v24l-3 1-1-14V59h-3m216 1a96 96 0 0 1 3 10l-16-2a3 3 0 0 0-3 4c3 0 5-2 8-1 8 3 16 6 25 6v8c6 7 14 11 22 15 0-4-3-7-6-9l-13-16a38 38 0 0 1-6-6c-3-4-8-5-10-10l-4 1m-399 2c-3 1-4 4-6 6l-1 4-3 8a23 23 0 0 0 2 4l-1 4c3 0 6 2 8 0 3-3 3-9 8-10 4 0 9-3 8-7l-9 4a51 51 0 0 1-7 1l-6-3a11 11 0 0 1 3-5c4-5 10-6 15-7l-11 1m-157-1v4a42 42 0 0 1 1 15c5-2 10-4 16-3 7 1 13 4 21 4v-7l5-1a12 12 0 0 0-4-2c-11-3-22-2-32-6l-7-4Z"/></svg>
+						</div> -->
+
+						<div>
+							<div class="uk-card">
+								<div class="uk-card-media-top">
+									<img src="images/ttt/row-1-column-1.png" uk-img="loading: eager" class="uk-width-1-1" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 class="uk-h5 uk-text-center">Единство в разнообразии</h3>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="uk-card">
+								<div class="uk-card-media-top">
+									<img src="images/ttt/row-1-column-2.png" uk-img="loading: eager" class="uk-width-1-1" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 class="uk-h5 uk-text-center">Положение женщин</h3>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="uk-card">
+								<div class="uk-card-media-top">
+									<img src="images/ttt/row-1-column-3.png" uk-img="loading: eager" class="uk-width-1-1" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 class="uk-h5 uk-text-center">Роль СМИ</h3>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="uk-card">
+								<div class="uk-card-media-top">
+									<img src="images/ttt/row-1-column-4.png" uk-img="loading: eager" class="uk-width-1-1" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 class="uk-h5 uk-text-center">Роль религии</h3>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="uk-card">
+								<div class="uk-card-media-top">
+									<img src="images/ttt/row-1-column-5.png" uk-img="loading: eager" class="uk-width-1-1" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 class="uk-h5 uk-text-center">Вклад молодежи</h3>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer>
+			footer
+		</footer>
+
+	</div>
+
+	<!-- * диалоговое окно -->
+	<div id="modal-mobile-menu" class="uk-modal-full" uk-modal>
+		<div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+			<button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+			<div class="uk-width-2xlarge uk-padding-large">
+				<ul class="uk-list">
+					<li class="uk-active"><a href="#" class="demo-lang-switch">ru</a></li>
+					<li><a href="#" class="demo-lang-switch">en</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+.uk-navbar {
+
+	$this: &;
+
+	gap: var(--navbar-gap-medium);
+
+	@media (min-width: 960px) {
+		gap: var(--navbar-gap-large);
+	}
+
+	&-primary:not(.uk-navbar-transparent) {
+		background-color: var(--navbar-primary-background-color);
+	}
+
+	&-toggle {
+		// # modal - 1010
+		// z-index: 9999;
+
+		& > svg {
+			pointer-events: none;
+		}
+	}
+
+	&-item,
+	&-nav>li>a,
+	&-toggle {
+		min-height: var(--navbar-min-height);
+		transition: var(--base-transition);
+		transition-property: min-height, color, background-color, border-color;
+
+	}
+
+
+	.uk-sticky.uk-active & :is(&-item, &-nav>li>a, &-toggle) {
+		--navbar-min-height: 3.75rem;
+
+		@media (max-width: 959px) {
+			min-height: var(--navbar-small-min-height);
+		}
+	}
+
+	.uk-sticky.uk-active & .uk-logo {
+		@media (max-width: 959px) {
+			& .uk-logo-ru,
+			& .uk-logo-en {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: .625rem;
+			}
+			html:lang(ru) & .uk-logo-en,
+			html:lang(en) & .uk-logo-ru {
+				display: none;
+			}
+		}
+	}
+
+	&-left, &-right, [class*=uk-navbar-center] {
+		gap: var(--navbar-gap-medium);
+
+		@media (min-width: 960px) {
+			gap: var(--navbar-gap-large);
+		}
+	}
+
+	&-center:not(:only-child) {
+		all: unset;
+	}
+
+	&-left, &-right {
+		flex: 1;
+	}
+	&-left {
+		justify-content: flex-start;
+	}
+	&-right {
+		justify-content: flex-end;
+	}
+
+	.uk-card-primary.uk-card-body &-nav>li>a,
+	.uk-card-primary>:not([class*=uk-card-media]) &-nav>li>a,
+	.uk-card-secondary.uk-card-body &-nav>li>a,
+	.uk-card-secondary>:not([class*=uk-card-media]) &-nav>li>a,
+	.uk-light &-nav>li>a,
+	.uk-offcanvas-bar &-nav>li>a,
+	.uk-overlay-primary &-nav>li>a,
+	.uk-section-primary:not(.uk-preserve-color) &-nav>li>a,
+	.uk-section-secondary:not(.uk-preserve-color) &-nav>li>a,
+	.uk-tile-primary:not(.uk-preserve-color) &-nav>li>a,
+	.uk-tile-secondary:not(.uk-preserve-color) &-nav>li>a,
+	.uk-card-primary.uk-card-body &-nav>li.uk-active>a,
+	.uk-card-primary>:not([class*=uk-card-media]) &-nav>li.uk-active>a,
+	.uk-card-secondary.uk-card-body &-nav>li.uk-active>a,
+	.uk-card-secondary>:not([class*=uk-card-media]) &-nav>li.uk-active>a,
+	.uk-light &-nav>li.uk-active>a,
+	.uk-offcanvas-bar &-nav>li.uk-active>a,
+	.uk-overlay-primary &-nav>li.uk-active>a,
+	.uk-section-primary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+	.uk-section-secondary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+	.uk-tile-primary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+	.uk-tile-secondary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+
+	.uk-card-primary.uk-card-body &-toggle:hover,
+	.uk-card-primary.uk-card-body &-toggle[aria-expanded=true],
+	.uk-card-primary>:not([class*=uk-card-media]) &-toggle:hover,
+	.uk-card-primary>:not([class*=uk-card-media]) &-toggle[aria-expanded=true],
+	.uk-card-secondary.uk-card-body &-toggle:hover,
+	.uk-card-secondary.uk-card-body &-toggle[aria-expanded=true],
+	.uk-card-secondary>:not([class*=uk-card-media]) &-toggle:hover,
+	.uk-card-secondary>:not([class*=uk-card-media]) &-toggle[aria-expanded=true],
+	.uk-light &-toggle:hover,
+	.uk-light &-toggle[aria-expanded=true],
+	.uk-offcanvas-bar &-toggle:hover,
+	.uk-offcanvas-bar &-toggle[aria-expanded=true],
+	.uk-overlay-primary &-toggle:hover,
+	.uk-overlay-primary &-toggle[aria-expanded=true],
+	.uk-section-primary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-section-primary:not(.uk-preserve-color) &-toggle[aria-expanded=true],
+	.uk-section-secondary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-section-secondary:not(.uk-preserve-color) &-toggle[aria-expanded=true],
+	.uk-tile-primary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-tile-primary:not(.uk-preserve-color) &-toggle[aria-expanded=true],
+	.uk-tile-secondary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-tile-secondary:not(.uk-preserve-color) &-toggle[aria-expanded=true] {
+		color: hsl(var(--navbar-primary-color-h) var(--navbar-primary-color-s) var(--navbar-primary-color-l) / var(--navbar-primary-color-a));
+	}
+
+	.uk-card-primary.uk-card-body &-nav>li.uk-active>a,
+	.uk-card-primary>:not([class*=uk-card-media]) &-nav>li.uk-active>a,
+	.uk-card-secondary.uk-card-body &-nav>li.uk-active>a,
+	.uk-card-secondary>:not([class*=uk-card-media]) &-nav>li.uk-active>a,
+	.uk-light &-nav>li.uk-active>a,
+	.uk-offcanvas-bar &-nav>li.uk-active>a,
+	.uk-overlay-primary &-nav>li.uk-active>a,
+	.uk-section-primary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+	.uk-section-secondary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+	.uk-tile-primary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+	.uk-tile-secondary:not(.uk-preserve-color) &-nav>li.uk-active>a,
+
+	.uk-card-primary.uk-card-body &-toggle:hover,
+	.uk-card-primary.uk-card-body &-toggle[aria-expanded=true],
+	.uk-card-primary>:not([class*=uk-card-media]) &-toggle:hover,
+	.uk-card-primary>:not([class*=uk-card-media]) &-toggle[aria-expanded=true],
+	.uk-card-secondary.uk-card-body &-toggle:hover,
+	.uk-card-secondary.uk-card-body &-toggle[aria-expanded=true],
+	.uk-card-secondary>:not([class*=uk-card-media]) &-toggle:hover,
+	.uk-card-secondary>:not([class*=uk-card-media]) &-toggle[aria-expanded=true],
+	.uk-light &-toggle:hover,
+	.uk-light &-toggle[aria-expanded=true],
+	.uk-offcanvas-bar &-toggle:hover,
+	.uk-offcanvas-bar &-toggle[aria-expanded=true],
+	.uk-overlay-primary &-toggle:hover,
+	.uk-overlay-primary &-toggle[aria-expanded=true],
+	.uk-section-primary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-section-primary:not(.uk-preserve-color) &-toggle[aria-expanded=true],
+	.uk-section-secondary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-section-secondary:not(.uk-preserve-color) &-toggle[aria-expanded=true],
+	.uk-tile-primary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-tile-primary:not(.uk-preserve-color) &-toggle[aria-expanded=true],
+	.uk-tile-secondary:not(.uk-preserve-color) &-toggle:hover,
+	.uk-tile-secondary:not(.uk-preserve-color) &-toggle[aria-expanded=true] {
+		--navbar-primary-color-a: 1;
+	}
+
+	&-dropdown-dropbar {
+		padding-block: var(--navbar-dropdown-dropbar-padding-block);
+
+		transition: var(--base-transition);
+		transition-property: padding;
+
+		.uk-sticky.uk-active & {
+			--navbar-dropdown-dropbar-padding-block: var(--navbar-sticked-dropdown-dropbar-padding-block);
+		}
+	}
+
+
+}

@@ -1,0 +1,65 @@
+@use '../abstracts/functions';
+
+/**
+ * * Типографика сайта
+ */
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+	font-size: 16px;
+	line-height: 1.375; // 22px
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	text-transform: uppercase;
+
+	:where(&):not(:first-child),
+	:where(&) + * {
+		margin-block-start: 1em;
+	}
+	:where(&):not(:last-child),
+	* + :where(&) {
+		margin-block-end: .875em;
+	}
+}
+h1 {
+	// * max - 42
+	// * min - 36
+	font-size: #{functions.dynamic-clamp(2.25, 2.625, 40, 60)};
+}
+h2 {
+	// * max - 38
+	// * min - 32
+	font-size: #{functions.dynamic-clamp(2, 2.375, 40, 60)};
+}
+h3 {
+	// * max - 34
+	// * min - 26
+	font-size: #{functions.dynamic-clamp(1.625, 2.125, 40, 60)};
+}
+h4 {
+	// * max - 28
+	// * min - 22
+	font-size: #{functions.dynamic-clamp(1.375, 1.75, 40, 60)};
+}
+h5 {
+	// * max - 24
+	// * min - 18
+	font-size: #{functions.dynamic-clamp(1.125, 1.5, 40, 60)};
+}
+h6 {
+	// * max - 20
+	// * min - 16
+	font-size: #{functions.dynamic-clamp(1, 1.25, 40, 60)};
+}
+
+p {
+	margin-block-end: 1em;
+
+	* + & {
+		margin-block-start: 1em;
+	}
+}

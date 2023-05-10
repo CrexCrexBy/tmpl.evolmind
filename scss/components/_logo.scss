@@ -1,0 +1,36 @@
+.uk-logo {
+
+	$this: &;
+
+	font-size: var(--logo-font-size);
+	line-height: 1;
+	text-transform: uppercase;
+
+	&-title {
+		:is(.uk-navbar-primary) & {
+			color: var(--logo-title-color);
+		}
+	}
+	&-subtitle {
+		:is(.uk-navbar-primary) & {
+			color: var(--logo-subtitle-color);
+		}
+	}
+
+	& > .uk-flex > [class*='uk-logo-'] {
+		padding: var(--logo-lang-padding);
+
+		:is(.uk-navbar-primary) & {
+			background-color: hsl(var(--logo-lang-background-color-h) var(--logo-lang-background-color-s) var(--logo-lang-background-color-l) / var(--logo-lang-background-color-a));
+		}
+
+		transition: var(--base-transition);
+		transition-property: background-color;
+	}
+
+	html:lang(ru) & #{$this}-ru,
+	html:lang(en) & #{$this}-en {
+		--logo-lang-background-color-a: .1;
+	}
+
+}

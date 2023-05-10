@@ -1,0 +1,22 @@
+/**
+ * * Липкий контейнер
+ */
+.sticky {
+
+	$this: &; // #{$this}
+
+	&__parent {
+	}
+	&__target {
+		background-color: hsl(0 0% 75%);
+
+		&--active {
+			position: fixed;
+			inset: 0 0 auto 0;
+		}
+	}
+	&__placeholder {
+		height: 0;
+	}
+
+}

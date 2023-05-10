@@ -1,0 +1,65 @@
+/**
+ * # Тестовая хрень
+ */
+.test {
+
+	--test-top-color-h: 320;
+	--test-top-color-s: 80%;
+	--test-top-color-l: 70%;
+	--test-bottom-color-h: 0;
+	--test-bottom-color-s: 80%;
+	--test-bottom-color-l: 50%;
+
+	--test-shadow-percent-top: 4%;
+	--test-shadow-percent-bottom: 8%;
+	--test-shadow-top-color-l: calc(var(--test-top-color-l) - var(--test-shadow-percent-top));
+	--test-shadow-bottom-color-l: calc(var(--test-bottom-color-l) - var(--test-shadow-percent-bottom));
+
+	position: relative;
+	isolation: isolate;
+	margin: 4em 1em;
+	overflow: hidden;
+
+	background-color: hsl(0 0% 85%);
+
+	background-image: linear-gradient(
+		hsl(var(--test-top-color-h) var(--test-top-color-s) var(--test-top-color-l)) 0%,
+		hsl(var(--test-bottom-color-h) var(--test-bottom-color-s) var(--test-bottom-color-l)) 100%
+	);
+
+	&, &::after {
+		width: 4em;
+		height: 4em;
+		aspect-ratio: 1;
+		border-radius: 100vh;
+	}
+
+
+	&::after {
+		--test-shadow-top-y: .25em;
+		--test-shadow-top-blur: .25em;
+		--test-shadow-top-spread: .125em;
+		--test-shadow-bottom-y: -.25em;
+		--test-shadow-bottom-blur: .25em;
+		--test-shadow-bottom-spread: .125em;
+		position: absolute;
+		content: '';
+		box-shadow:
+			inset 0 0 .125em .0625em hsl(0 0% 0% / .25),
+			inset 0 var(--test-shadow-top-y) var(--test-shadow-top-blur) var(--test-shadow-top-spread) hsl(var(--test-top-color-h) var(--test-top-color-s) var(--test-shadow-top-color-l)),
+			inset 0 var(--test-shadow-bottom-y) var(--test-shadow-bottom-blur) var(--test-shadow-bottom-spread) hsl(var(--test-bottom-color-h) var(--test-bottom-color-s) var(--test-shadow-bottom-color-l));
+		transition: .2s ease-in-out;
+		transition-property: box-shadow;
+	}
+
+	&:hover::after {
+		--test-shadow-top-y: .125em;
+		--test-shadow-top-blur: .25em;
+		--test-shadow-top-spread: .125em;
+		--test-shadow-bottom-y: -1em;
+		--test-shadow-bottom-blur: .55em;
+		--test-shadow-bottom-spread: .125em;
+
+	}
+
+}

@@ -1,0 +1,20 @@
+/**
+ * * Подключение файлов шрифтов
+ */
+
+// * шрифт - Огненная Ночь
+// # автор - Alexey Pushkov
+// ? ссылка - https://vk.com/wall-212963540_859
+// * лицензия - полностью бесплатно для любого использования
+// @font-face {
+// 	font-family: 'FireNight';
+// 	font-style: normal;
+// 	font-weight: 400;
+// 	font-stretch: 100%;
+// 	font-display: swap;
+// 	src: url(../fonts/Firenight-Regular.woff2) format('woff2');
+// }
+
+// * шрифт - Open Sans
+// ? ссылка - https://fonts.google.com/specimen/Open+Sans?subset=cyrillic
+@forward 'fonts/OpenSans';

@@ -1,0 +1,27 @@
+/**
+ * * Классы-помощники
+ */
+
+// * визуальное скрытие
+// ? https://gist.github.com/KazakovAS/e64828747a1f84f67a6ee778e1f68b9c
+// ! ссылка уже не работает
+// * Чтобы правильно спрятать элемент нужно:
+// * 1. Убрать элемент из a11y-дерева, добавив: aria-hidden="true"
+// * 2. Исключить из порядка навигации с клавиатуры: tabindex="-1"
+// * 3. Скрыть визуально: class="visually-hidden"
+// # Пример:
+// * <a href="#" class="visually-hidden" aria-hidden="true" tabindex="-1">...</a>
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	white-space: nowrap;
+	overflow: hidden;
+	border: 0;
+
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+}

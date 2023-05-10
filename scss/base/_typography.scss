@@ -1,0 +1,14 @@
+/**
+ * * Типографика сайта
+ */
+
+html {
+	font-family: var(--base-font-family);
+	font-weight: var(--base-font-weight);
+
+	background-color: var(--html-background-color);
+	color: var(--html-color);
+
+	transition: var(--base-transition);
+	transition-property: background-color, color;
+}

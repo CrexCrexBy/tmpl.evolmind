@@ -1,0 +1,22 @@
+/**
+ * * Функции SASS
+ */
+
+// * функция динамического clamp()
+// * идея, расчет и части формулы взято отсюда:
+// ? https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+@function dynamic-clamp(
+	$min-font-size,
+	$max-font-size,
+	$min-width,
+	$max-width
+) {
+
+	$slope: calc(($max-font-size - $min-font-size) / ($max-width - $min-width));
+
+	$y-axis-intersection: calc((-1 * $min-width) * $slope + $min-font-size);
+
+	$preferred-value: $y-axis-intersection + 'rem' + calc($slope * 100) + 'vw';
+
+	@return unquote('clamp(#{$min-font-size}rem, #{$y-axis-intersection}rem + #{$slope * 100}vw, #{$max-font-size}rem)');
+}
